@@ -8,5 +8,8 @@
     "dependencies": {
         "codash": "*",
         "moment": "*"
+    },
+    "devDependencies": {
+        "co": "*"
     }
 }

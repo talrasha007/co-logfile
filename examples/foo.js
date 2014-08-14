@@ -1,7 +1,11 @@
 var Logger = require('../');
 
-var logger = new Location('foo.%s.log', { splitBy: { hour: true, size: 512  } });
+var shlog = new Logger('sfoo.log', { splitBy: { hour: true, size: 512  } });
+var hlog = new Logger('foo.log', { splitBy: { hour: true  } });
+var dlog = new Logger('bar.log');
 
 setInterval(function () {
-    logger.write({ foo: 'bar' });
+    shlog.write({ bb: 'bb' });
+    hlog.write({ foo: 'bar' });
+    dlog.write({ bar: 'foo' });
 }, 100);

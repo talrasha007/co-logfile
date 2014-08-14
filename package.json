@@ -6,10 +6,7 @@
     "readmeFile": "README.md",
     "description": "Log file lib with co style.",
     "dependencies": {
-        "codash": "*",
+        "lodash": "*",
         "moment": "*"
-    },
-    "devDependencies": {
-        "co": "*"
     }
 }

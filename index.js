@@ -29,6 +29,13 @@ Logger.prototype = {
         this._stream.write(msg, cb);
     },
 
+    coWrite: function (msg) {
+        var me = this;
+        return function (cb) {
+            me.write(msg, cb);
+        };
+    },
+
     _rotate: function () {
         var me = this;
         var now = moment();

@@ -48,6 +48,7 @@ Logger.prototype = {
         if (this._opt.splitBy.size > 0) fp.push(++this._cnt);
         fp.push('log');
 
+        if (this._stream) this._stream.end();
         this._stream = fs.createWriteStream(fp.join('.'));
         this._hour = now.hours();
         this._written = 0;

@@ -10,7 +10,7 @@ npm install co-logfile
 # Usage
   - new Logger(path, opt) # log filename will be path + logfile info + '.log'
   - logger.write(msg) # msg can be a string or an object.
-  - logger.coWrite(msg) # For co, you can write code like: yield logger.cowrite('blabla');
+  - logger.coWrite(msg) # For co, you can write code like: yield logger.cowrite('blabla'); If there are too many logs to write, this may help.
 
 ```js
 var Logger = require('../');
